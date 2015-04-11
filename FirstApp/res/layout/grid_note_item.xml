@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.customview.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:padding="10dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    >
+    
+    <TextView 
+        android:id="@+id/tv_note_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:textStyle="bold" />
+    <ImageView 
+        android:id="@+id/imv_alarm"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tv_title"
+        android:visibility="gone"
+        android:src="@drawable/ic_action_alarms_select"/>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_title"
+        android:background="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seperator"
+        android:layout_above="@+id/tv_created_at"
+        android:maxLines="3"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tv_created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/black" />
+
+</com.example.customview.SquareLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="150dp"
+    android:orientation="horizontal" >
+    
+    <com.example.customview.SquareTextView 
+        android:id="@+id/tv_color_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_weight="1"/>
+    <com.example.customview.SquareTextView 
+        android:id="@+id/tv_color_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="10dp"
+        android:background="@android:color/holo_purple"
+        android:layout_weight="1"/>
+    <com.example.customview.SquareTextView 
+        android:id="@+id/tv_color_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="10dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_weight="1"/>
+    <com.example.customview.SquareTextView 
+        android:id="@+id/tv_color_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="10dp"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_weight="1"/>
+    
+
+</LinearLayout>

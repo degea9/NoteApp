@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_note"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_action_bottom" >
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <com.example.customview.ExpandableHeightGridView
+                android:id="@+id/note_detail_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+            <TextView 
+                android:id="@+id/tv_created_date"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/note_detail_grid"
+                android:layout_height="wrap_content"/>
+
+            <com.example.customview.TitleEditText
+                android:id="@+id/edt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="@null"
+                android:layout_below="@id/tv_created_date"
+                android:hint="@string/hint_title"
+                android:singleLine="true"
+                android:padding="5dp"
+                android:inputType="none" />
+
+            <com.example.customview.LinedEditText
+                android:id="@+id/edt_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_title"
+                android:background="@null"
+                android:hint="@string/hint_details"
+                android:inputType="textMultiLine"
+                 android:padding="5dp"
+                android:scrollbars="vertical" >
+            </com.example.customview.LinedEditText>
+
+            <ImageView
+                android:id="@+id/imv_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_details"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_action_alarms_select" />
+
+            <TextView
+                android:id="@+id/tv_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imv_clock"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imv_clock"
+                android:text="@string/alarm" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spn_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imv_clock"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imv_clock" 
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imv_clock"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/spn_date"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imv_delete_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imv_clock"
+                 android:layout_marginLeft="5dp"
+                 android:layout_toRightOf="@id/spn_time"
+                android:src="@drawable/ic_action_cancel" 
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_action_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ab_background_textured_example"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imv_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_previous_item" />
+
+        <ImageView
+            android:id="@+id/imv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_share" />
+
+        <ImageView
+            android:id="@+id/imv_discard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_discard" />
+
+        <ImageView
+            android:id="@+id/imv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_next_item" />
+    </LinearLayout>
+
+</RelativeLayout>

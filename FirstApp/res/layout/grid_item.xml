@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.firstapp.MainActivity" >
+    
+    <TextView 
+        android:id="@+id/tv_photo_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <ImageView 
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/test"
+        android:src="@drawable/ic_launcher"/>
+    <ImageView 
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/test1"
+        android:src="@drawable/ic_action_cancel"
+        android:layout_alignBottom="@+id/test"
+        android:layout_alignRight="@+id/test"/>
+
+   
+
+</RelativeLayout>

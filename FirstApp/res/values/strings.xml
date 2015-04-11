@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FirstApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_new_note">New note</string>
+    <string name="action_add">Add</string>
+    <string name="action_cam">Pick up photo</string>
+    <string name="action_save">Save</string>
+    <string name="action_pick_color">Choose color</string>
+    <string name="test">Test</string>
+    <string name="test1">Test1</string>
+    <string name="camera">Camera</string>
+    <string name="picture">Picture</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="alarm">Alarm</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_details">Note</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="title_activity_note_detail">NoteDetailActivity</string>
+
+    <string-array name="date_array">
+        <item>Today</item>
+        <item>Tomorrow</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>09:00</item>
+        <item>13:00</item>
+        <item>17:00</item>
+        <item>20:00</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="title_activity_swipe">SwipeActivity</string>
+
+</resources>
